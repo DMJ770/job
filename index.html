@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+   
+     <link rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  >
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>DSPA JOB HIRE</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('L.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border: 2px solid gold;
+      width: 60%;
+      margin: 50px auto;
+    }
+    .header {
+      color: Gold;
+      font-size: 33px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .sub-header {
+      color: white;
+      font-size: 20px;;
+      text-align: center;
+    }
+    .ola {
+      color: Green;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .h2 {
+      color: red;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 80%;
+      height: auto;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: Gold;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .logo {
+      position: absolute;
+      height: 80px;
+      top: 20px;
+      right: 50%; /*Adjusted the right position to move to the top-right corner*/
+      border-radius: 50%;
+      border: 2px; solid #ffff;
+    }
+  </style>
+ 
+	<script>
+	    var r_text = new Array ();
+r_text[0] = "London";
+r_text[1] = "Edinburgh";
+r_text[2] = "Cardiff";
+r_text[3] = "Cambridge";
+r_text[5] = "Windsor";
+r_text[4] = "Liverpool";
+r_text[6] = "Grimsby";
+r_text[7] = "Manchester";
+r_text[8] = "Leeds";
+r_text[9] = "Reading";
+
+
+    var r_map = new Array ();
+r_map[0] = "https://s3.amazonaws.com/provely-public/images/maps/02a342794409deaf5f29216201d9da30.jpg";
+r_map[1] = "https://s3.amazonaws.com/provely-public/images/maps/359f4e0ae29d7fb7af480e4e87ced439.jpg";
+r_map[2] = "https://s3.amazonaws.com/provely-public/images/maps/4b2aee97b83b39dd44d9be1041e06a83.jpg";
+r_map[4] = "https://s3.amazonaws.com/provely-public/images/maps/2211ef3aabad24eb566b23da26669662.jpg";
+r_map[5] = "https://s3.amazonaws.com/provely-public/images/maps/3d147c6ba113929f5a004a5e9dcc832e.jpg";
+r_map[6] = "https://s3.amazonaws.com/provely-public/images/maps/e10212e09e6eb3b49d00e046870445af.jpg";
+
+ 
+var r_product = new Array ();
+r_product[0] = "purchased item 1";
+r_product[1] = "purchased item 2";
+r_product[2] = "purchased item 3 Hosting";
+r_product[3] = "purchased Licence ";
+r_product[4] = "renewed Hosting";
+r_product[5] = "renewed AWS/VPS";
+r_product[6] = "renewed Wordpress Hosting";
+r_product[7] = "renewed Licence ";
+     setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 3000);
+      $(".custom-close").click(function() {
+        $(".custom-social-proof").stop().slideToggle('slow');
+      });
+        setInterval(function(){    
+        	var myNumber = Math.floor(7*Math.random());
+        	$("#map1").attr("src",r_map[myNumber]);
+ 			$('#country').text(r_text[myNumber]);
+
+          	$('#product').text(r_product[Math.floor(7*Math.random())]);
+ 			var timeVal = Math.floor(7*Math.random());
+ 	
+ 			$('#time').text(timeVal);
+ 		
+ 		 
+     //console.log(timeVal); 
+ }, 6000);
+	</script>
+	<style>
+	    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+.custom-social-proof {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999999999999 !important;
+  font-family: 'Open Sans', sans-serif;
+    //display: none;  /* Uncoment This Line to Hide Initially*/
+    .custom-notification {
+        width: 400px;
+        border: 0;
+        text-align: left;
+        z-index: 99999;
+        box-sizing: border-box;
+        font-weight: 400;
+        border-radius: 6px;
+        box-shadow: 2px 2px 10px 2px hsla(0, 4%, 4%, 0.2);
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        .custom-notification-container {
+            display: flex !important;
+            align-items: center;
+            height: 80px;
+            .custom-notification-image-wrapper {
+                img {
+                                    padding: 0 !important;
+                    font-size: 14px;
+                    line-height: 16px;
+                    small {
+                        margin-top: 3px !important;
+                        display: block !important;
+                        font-size: 12px !important;
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+        .custom-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            height: 12px;
+            width: 12px;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            transform: rotate(45deg);
+            opacity: 0;
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: gray;
+                position: absolute;
+                left: 0;
+                top: 5px;
+            }
+                            height: 100%;
+                width: 2px;
+                background-color: gray;
+                position: absolute;
+                left: 5px;
+                top: 0;
+            }
+        }
+        &:hover {
+            .custom-close {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.poweredby{
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 3px;
+    color:  #3498db;
+}
+	</style>	
+</head>
+<body>
+ <div class="header" color>DSPA JOB HIRE</div>
+   <div class="sub-header">DAILY PAYMENT</span></div>
+  <div class="overlay">
+   
+   <div class="header">CASH MACHINE</div>
+   
+    <div class="sub-header">GET Hired, Work And Get Paid DAILY</div>
+    <img src="Go.png" alt="Description of the image">
+    
+    <button onclick="redirectToCTAPage()">APPLY NOW</button>
+
+     
+  </div>
+ <section class="custom-social-proof">
+    <div class="custom-notification">
+      <div class="custom-notification-container">
+        <div class="custom-notification-image-wrapper">
+          <img id="map1" src="https://wiki.openstreetmap.org/w/images/d/d1/Tile_osm-no-label.png" style="width: 50px; height: 50px">
+        </div>
+        <div class="custom-notification-content-wrapper">
+          <p class="custom-notification-content">
+            Someone from <span id="country">Nepal</span><br>recently <span id="product"> purchased hosting</span>
+            <small>
+            
+              <span id="time">1</span> hour ago &nbsp; 
+              <i class="fa fa-check-circle"></i> Verified by <a class="poweredby" href="https://thenexttechie.com" target="_blank">The Next Techie</a>
+            </small>
+          </p>
+        </div>
+      </div>
+      <div class="custom-close"></div>
+    </div>
+  </section>
+    
+  <script>
+    function redirectToCTAPage() {
+      // Replace 'your-cta-page.html' with the actual path to your CTA page
+      window.location.href = 'your-cta-page.html';
+    }
+  </script>
+</body>
+</html>
